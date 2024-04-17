@@ -1,11 +1,39 @@
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase/firebase.config';
 
 const Login = () => {
+  const [registerError, setRegisterError] = useState('');
+  const [success, setSuccess] = useState('');
+
   const handleLogin = e => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
+
+    setRegisterError('');
+    setSuccess('');
+
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(result => {
+        console.log(result.user);
+        setSuccess('User Logger In Successfully');
+
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: 'https://example.com/jane-q-user/profile.jpg',
+        })
+          .then(() => {
+            console.log('Profile Updated');
+          })
+          .catch();
+      })
+      .catch(error => {
+        console.error(error);
+        setRegisterError(error.message);
+      });
   };
 
   return (

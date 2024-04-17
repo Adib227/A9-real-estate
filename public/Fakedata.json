@@ -1,0 +1,50 @@
+[
+  {
+    "estate_title": "Luxury Villa",
+    "id": 1,
+    "segment_name": "Residential",
+    "description": "A luxurious villa with a beautiful view",
+    "price": "$1,000,000",
+    "Status": "sale",
+    "Area": "5000 sq ft",
+    "location": "Los Angeles, CA",
+    "facilities": ["living room", "swimming pool", "kitchen", "gym"],
+    "image": "luxury_villa.jpg"
+  },
+  {
+    "estate_title": "Modern Apartment",
+    "id": 2,
+    "segment_name": "Residential",
+    "description": "A modern apartment in the city center",
+    "price": "$500,000",
+    "Status": "sale",
+    "Area": "2000 sq ft",
+    "location": "New York, NY",
+    "facilities": ["living room", "gym", "terrace"],
+    "image": "modern_apartment.jpg"
+  },
+  {
+    "estate_title": "Beach House",
+    "id": 3,
+    "segment_name": "Residential",
+    "description": "A cozy beach house with ocean view",
+    "price": "$700,000",
+    "Status": "rent",
+    "Area": "3000 sq ft",
+    "location": "Miami, FL",
+    "facilities": ["living room", "swimming pool", "beach access"],
+    "image": "beach_house.jpg"
+  },
+  {
+    "estate_title": "Country Estate",
+    "id": 4,
+    "segment_name": "Residential",
+    "description": "A spacious estate in the countryside",
+    "price": "$800,000",
+    "Status": "sale",
+    "Area": "4000 sq ft",
+    "location": "Austin, TX",
+    "facilities": ["living room", "garden", "guest house"],
+    "image": "country_estate.jpg"
+  }
+]

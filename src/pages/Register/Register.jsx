@@ -14,7 +14,8 @@ const Register = () => {
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(name, email, password);
+    const displayName = e.target.displayName.value;
+    console.log(name, displayName, email, password);
 
     setRegisterError('');
     setSuccess('');
@@ -34,13 +35,13 @@ const Register = () => {
       return;
     }
 
-    createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, name, email, password)
       .then(result => {
         console.log(result.user);
         setSuccess('User Created Successfully');
 
         updateProfile(result.user, {
-          // displayName= name,
+          displayName: name,
           photoURL: 'https://example.com/jane-q-user/profile.jpg',
         })
           .then(() => {
