@@ -18,13 +18,13 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
-        loader: () => fetch('./Fakedata.json'),
+        loader: () => fetch('/Fakedata.json'),
       },
 
       {
         path: '/estatedetails/:id',
         element: <EstateDetails></EstateDetails>,
-        loader: () => fetch('./Fakedata.json'),
+        loader: () => fetch('/Fakedata.json'),
       },
       {
         path: '/login',

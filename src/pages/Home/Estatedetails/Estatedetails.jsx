@@ -1,10 +1,17 @@
-import { useLoaderData } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useLoaderData, useParams } from 'react-router-dom';
 
 const EstateDetails = () => {
   const book = useLoaderData();
+  const { id } = useParams();
+  const [singleDetails, setSingleDetails] = useState();
+  useEffect(() => {
+    const estatedetails = book.find(property => property.id == id);
+    setSingleDetails(estatedetails);
+  }, []);
   const {
     estate_title,
-    id,
+
     segment_name,
     description,
     price,
@@ -13,7 +20,7 @@ const EstateDetails = () => {
     location,
     facilities,
     image,
-  } = book || {};
+  } = singleDetails || {};
   console.log(book);
 
   return (

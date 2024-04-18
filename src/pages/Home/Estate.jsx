@@ -28,7 +28,7 @@ const Estate = ({ bEstate }) => {
             <p className="text-2xl">Price : {price}</p>
             <p className="text-2xl"> For : {Status}</p>
           </div>
-          <Link to="/estatedetails/${:id}">
+          <Link to={`/estatedetails/${id}`}>
             <button
               type="button"
               className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-violet-600 dark:text-gray-50"
