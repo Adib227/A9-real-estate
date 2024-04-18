@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 
 const EstateDetails = () => {
   const book = useLoaderData();
@@ -55,6 +55,11 @@ const EstateDetails = () => {
               <div className="flex">
                 <p className="font-medium">Facilities : </p>
                 <p className=" font-medium">{facilities}</p>
+              </div>
+              <div>
+                <Link to="/">
+                  <button className="btn btn-success">Back to Home</button>
+                </Link>
               </div>
             </div>
           </div>
