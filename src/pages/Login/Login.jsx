@@ -2,10 +2,15 @@ import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase/firebase.config';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
   const [registerError, setRegisterError] = useState('');
   const [success, setSuccess] = useState('');
+  const handleToast = () => {
+    toast('Logged in successfully');
+  };
 
   const handleLogin = e => {
     e.preventDefault();
@@ -70,7 +75,9 @@ const Login = () => {
                 />
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button onClick={handleToast} className="btn btn-primary">
+                  Login
+                </button>
               </div>
               <p>
                 New here? Please
@@ -82,6 +89,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

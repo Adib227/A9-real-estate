@@ -14,6 +14,21 @@ const Navbar = () => {
           User Profile
         </NavLink>
       </li>
+      <li>
+        <NavLink className to="/updateProfile">
+          Update Profile
+        </NavLink>
+      </li>
+      <li>
+        <NavLink className to="/errorPage">
+          404 Page
+        </NavLink>
+      </li>
+      <li>
+        <NavLink className to="/aboutUs">
+          About us
+        </NavLink>
+      </li>
     </>
   );
 

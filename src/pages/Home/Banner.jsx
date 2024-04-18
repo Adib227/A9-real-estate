@@ -18,7 +18,7 @@ const Banner = () => {
         <img
           className="h-fit lg:h-[600px] w-full relative"
           src="https://i.ibb.co/WWp5jqx/house-540796-1280.jpg"
-          alt="Your Next Dream House"
+          alt=""
         />
       </SwiperSlide>
       <SwiperSlide>

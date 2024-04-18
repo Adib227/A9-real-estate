@@ -6,6 +6,9 @@ import Root from './Layouts/Root.jsx';
 import Home from './pages/Home/Home.jsx';
 import Login from './pages/Login/Login.jsx';
 import Register from './pages/Register/Register.jsx';
+import Estate from './pages/Home/Estate.jsx';
+import EstateDetails from './pages/Home/Estatedetails/Estatedetails.jsx';
+import Errorpage from './pages/Errorpage/Errorpage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +18,13 @@ const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>,
+        loader: () => fetch('./Fakedata.json'),
+      },
+
+      {
+        path: '/estatedetails/:id',
+        element: <EstateDetails></EstateDetails>,
+        loader: () => fetch('./Fakedata.json'),
       },
       {
         path: '/login',
@@ -23,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>,
+      },
+      {
+        path: '/errorpage',
+        element: <Errorpage></Errorpage>,
       },
     ],
   },
