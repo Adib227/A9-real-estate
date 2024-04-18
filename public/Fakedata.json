@@ -8,7 +8,7 @@
     "Status": "sale",
     "Area": "5000 sq ft",
     "location": "Los Angeles, CA",
-    "facilities": ["living room", "swimming pool", "kitchen", "gym"],
+    "facilities": "Living room, Swimming pool, Kitchen, Gym",
     "image": "https://i.ibb.co/y0DJ8Zm/villa-4621636-1280.jpg"
   },
   {
@@ -20,7 +20,7 @@
     "Status": "sale",
     "Area": "2000 sq ft",
     "location": "New York, NY",
-    "facilities": ["living room", "gym", "terrace"],
+    "facilities": "Living room, Gym, Terrace",
     "image": "https://i.ibb.co/KVWdpPR/building-5630441-1280.jpg"
   },
   {
@@ -32,7 +32,7 @@
     "Status": "rent",
     "Area": "3000 sq ft",
     "location": "Miami, FL",
-    "facilities": ["living room", "swimming pool", "beach access"],
+    "facilities": "Living room, Swimming pool, Beach access",
     "image": "https://i.ibb.co/MRfZDjP/ameland-5651866-1280.jpg"
   },
   {
@@ -44,7 +44,7 @@
     "Status": "sale",
     "Area": "4000 sq ft",
     "location": "Austin, TX",
-    "facilities": ["living room", "garden", "guest house"],
+    "facilities": "living room, garden, guest house",
     "image": "https://i.ibb.co/Fwgq3vv/ancient-70996-1280.jpg"
   },
   {
@@ -56,7 +56,7 @@
     "Status": "sale",
     "Area": "3500 sq ft",
     "location": "Denver, CO",
-    "facilities": ["living room", "mountain view", "fireplace"],
+    "facilities": "living room, mountain view, fireplace",
     "image": "https://i.ibb.co/Vp4rQ6p/house-8683351-1280.jpg"
   },
   {
@@ -68,7 +68,7 @@
     "Status": "rent",
     "Area": "1800 sq ft",
     "location": "San Francisco, CA",
-    "facilities": ["living room", "rooftop terrace", "gym"],
+    "facilities": "living room, rooftop terrace, gym",
     "image": "https://i.ibb.co/nBwqBP8/road-6881040-1280.jpg"
   }
 ]

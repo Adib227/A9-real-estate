@@ -26,14 +26,13 @@ const Login = () => {
         console.log(result.user);
         setSuccess('User Logger In Successfully');
 
-        updateProfile(result.user, {
-          displayName: name,
-          photoURL: 'https://example.com/jane-q-user/profile.jpg',
-        })
-          .then(() => {
-            console.log('Profile Updated');
-          })
-          .catch();
+        // updateProfile(result.user, {
+        //   photoURL: 'https://example.com/jane-q-user/profile.jpg',
+        // })
+        //   .then(() => {
+        //     console.log('Profile Updated');
+        //   })
+        //   .catch();
       })
       .catch(error => {
         console.error(error);

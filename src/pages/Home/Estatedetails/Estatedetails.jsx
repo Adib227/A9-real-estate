@@ -11,7 +11,6 @@ const EstateDetails = () => {
   }, []);
   const {
     estate_title,
-
     segment_name,
     description,
     price,
@@ -30,30 +29,32 @@ const EstateDetails = () => {
           <img src={image} className="max-w-sm rounded-lg shadow-2xl" />
           <div>
             <h1 className="text-2xl lg:text-4xl font-bold">{estate_title}</h1>
-            <p>{description}</p>
-            <h3 className="font-medium py-5">{description}</h3>
+            <h3 className="font-medium py-5 text-xl">{description}</h3>
             <hr className="lg:w-[700px] my-3" />
-            <h3 className="font-medium py3">{segment_name}</h3>
+            <h3 className="font-bold py3 text-xl lg:text-2xl">
+              {segment_name}
+            </h3>
             <hr className="lg:w-[700px] my-3" />
-            <p>Review : {Area}</p>
-            <p className="btn bg-[#23BE0A0D] text-[#23BE0A] rounded-2xl my-3"></p>
-            <hr className="lg:w-[700px] my-3" />
+            <div className="my-4">
+              <p className="font-medium">Review : {Area}</p>
+            </div>
+            {/* <p className="btn bg-[#23BE0A0D] text-[#23BE0A] rounded-2xl my-3"></p> */}
             <div className="space-y-4">
-              <div className="flex gap-x-20">
-                <p className="">Number of Pages :</p>
+              <div className="flex">
+                <p className="font-medium">Location :</p>
                 <p className="font-medium ">{location}</p>
               </div>
-              <div className="flex gap-x-20">
-                <p className="">Publisher :</p>
-                <p className="font-medium ml-14">{Status}</p>
+              <div className="flex ">
+                <p className="font-medium">For : </p>
+                <p className="font-medium "> {Status}</p>
               </div>
-              <div className="flex gap-x-20">
-                <p className="">Year of Publishing:</p>
+              <div className="flex ">
+                <p className="font-medium">Price : </p>
                 <p className="font-medium ">{price}</p>
               </div>
-              <div className="flex gap-x-20">
-                <p className="">Rating :</p>
-                <p className="font-medium ml-20">{facilities}</p>
+              <div className="flex">
+                <p className="font-medium">Facilities : </p>
+                <p className=" font-medium">{facilities}</p>
               </div>
             </div>
           </div>
