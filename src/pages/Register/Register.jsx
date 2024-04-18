@@ -14,8 +14,8 @@ const Register = () => {
     const name = e.target.name.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    const displayName = e.target.displayName.value;
-    console.log(name, displayName, email, password);
+    // const displayName = e.target.displayName.value;
+    console.log(name, email, password);
 
     setRegisterError('');
     setSuccess('');
@@ -35,19 +35,19 @@ const Register = () => {
       return;
     }
 
-    createUserWithEmailAndPassword(auth, name, email, password)
+    createUserWithEmailAndPassword(auth, email, password)
       .then(result => {
         console.log(result.user);
         setSuccess('User Created Successfully');
 
-        updateProfile(result.user, {
-          displayName: name,
-          photoURL: 'https://example.com/jane-q-user/profile.jpg',
-        })
-          .then(() => {
-            console.log('Profile Updated');
-          })
-          .catch();
+        // updateProfile(result.user, {
+        //   displayName: name,
+        //   photoURL: 'https://example.com/jane-q-user/profile.jpg',
+        // })
+        //   .then(() => {
+        //     console.log('Profile Updated');
+        //   })
+        //   .catch();
       })
       .catch(error => {
         // console.log(error);
