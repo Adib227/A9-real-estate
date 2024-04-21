@@ -8,8 +8,8 @@ const Estate = ({ bEstate }) => {
     bEstate;
 
   return (
-    <div className=" mx-auto hover:effect">
-      <div className="max-w-xs lg:max-w-xl mx-auto p-8 m-8 rounded-md shadow-md dark:bg-gray-50 dark:text-gray-800">
+    <div className=" mx-auto">
+      <div className="max-w-xs lg:max-w-xl mx-auto p-8 m-8 rounded-md shadow-xl dark:bg-gray-100 dark:text-gray-800">
         <img
           src={image}
           alt=""
@@ -19,14 +19,19 @@ const Estate = ({ bEstate }) => {
           <div className="space-y-2">
             <h2 className="text-4xl font-bold tracking-wide">{estate_title}</h2>
             <h1 className="text-xl">ID No : {id}</h1>
-            <h3 className="text-2xl">{segment_name}</h3>
+            <h3 className="text-2xl font-medium">{segment_name}</h3>
             <p className="dark:text-gray-800 text-2xl font-medium">
               {description}
             </p>{' '}
           </div>
-          <div className="flex gap-x-7">
-            <p className="text-2xl">Price : {price}</p>
-            <p className="text-2xl"> For : {Status}</p>
+          <div className="grid lg:flex gap-x-7">
+            <p className="text-2xl text-white bg-indigo-600 p-3 lg:p-4 rounded-xl">
+              Price : {price}
+            </p>
+            <p className="text-2xl font-semibold  flex bg-lime-500 p-3 lg:p-4 rounded-xl">
+              {' '}
+              For : {Status}
+            </p>
           </div>
           <Link to={`/estatedetails/${id}`}>
             <button

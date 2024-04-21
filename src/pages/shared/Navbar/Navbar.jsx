@@ -34,7 +34,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar bg-base-100">
-      <div className="navbar-start">
+      <div className="navbar-start mt-8">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -54,12 +54,22 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             {navLinks}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">Ten Build</a>
+        <Link to="/">
+          <a className="btn btn-ghost text-2xl lg:text-3xl -mt-2">
+            {' '}
+            <img
+              className="w-8 lg:w-10 -mt-2 "
+              src="https://i.ibb.co/SBKhwS0/logo-e9072e9cbf659e7c4c064d779973263c.jpg"
+              alt=""
+            />{' '}
+            Ten Build
+          </a>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>

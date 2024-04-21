@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase/firebase.config';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
   const [registerError, setRegisterError] = useState('');
@@ -57,7 +58,9 @@ const Register = () => {
 
   return (
     <div>
-      {' '}
+      <Helmet>
+        <title>Ten Build - Register</title>
+      </Helmet>{' '}
       <div>
         <div className="hero min-h-screen bg-base-200 my-12 rounded-lg">
           <div className="hero-content flex-col ">

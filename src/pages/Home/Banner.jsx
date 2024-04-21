@@ -13,7 +13,11 @@ import { Navigation } from 'swiper/modules';
 
 const Banner = () => {
   return (
-    <Swiper navigation={true} modules={[Navigation]} className="mySwiper my-8">
+    <Swiper
+      navigation={true}
+      modules={[Navigation]}
+      className="mySwiper my-8 mt-10 lg:mt-8"
+    >
       <SwiperSlide>
         <img
           className="h-fit lg:h-[600px] w-full relative"

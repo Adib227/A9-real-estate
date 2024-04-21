@@ -9,6 +9,9 @@ import Register from './pages/Register/Register.jsx';
 import Estate from './pages/Home/Estate.jsx';
 import EstateDetails from './pages/Home/Estatedetails/Estatedetails.jsx';
 import Errorpage from './pages/Errorpage/Errorpage.jsx';
+import Userprofile from './pages/Userprofile/Userprofile.jsx';
+import Updateprofile from './pages/Updateprofile/Updateprofile.jsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +29,14 @@ const router = createBrowserRouter([
         element: <EstateDetails></EstateDetails>,
         loader: () => fetch('/Fakedata.json'),
       },
+      // {
+      //   path: '/userprofile',
+      //   element: <Userprofile></Userprofile>,
+      // },
+      // {
+      //   path: '/updateprofile',
+      //   element: <Updateprofile></Updateprofile>,
+      // },
       {
         path: '/login',
         element: <Login></Login>,
@@ -44,6 +55,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <HelmetProvider>
+      <RouterProvider router={router}></RouterProvider>
+    </HelmetProvider>
   </React.StrictMode>
 );

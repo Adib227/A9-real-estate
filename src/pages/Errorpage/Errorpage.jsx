@@ -1,15 +1,20 @@
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const Errorpage = () => {
   return (
     <div>
-      <section className="flex items-center h-full p-16 dark:bg-gray-50 dark:text-gray-800">
+      <Helmet>
+        <title>Ten Build - 404</title>
+      </Helmet>
+      <section className="flex items-center h-full lg:p-16 dark:bg-gray-200 dark:text-gray-800 m-16">
         <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
-          <div className="max-w-md text-center">
+          <div className=" text-center">
             <h2 className="mb-8 font-extrabold text-9xl dark:text-gray-400">
-              <span className="sr-only">Error</span>404
+              <img src="https://i.ibb.co/7zSqKzb/error.png" alt="" />
+              {/* <span className="sr-only">Error</span>404 */}
             </h2>
-            <p className="text-2xl font-semibold md:text-3xl">
+            <p className="text-2xl font-semibold md:text-3xl lg:text-4xl">
               Sorry, we couldn't find this page.
             </p>
             <p className="mt-4 mb-8 dark:text-gray-600">
