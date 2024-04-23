@@ -17,6 +17,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Root></Root>,
+    errorElement: <Errorpage></Errorpage>,
     children: [
       {
         path: '/',
@@ -29,14 +30,6 @@ const router = createBrowserRouter([
         element: <EstateDetails></EstateDetails>,
         loader: () => fetch('/Fakedata.json'),
       },
-      // {
-      //   path: '/userprofile',
-      //   element: <Userprofile></Userprofile>,
-      // },
-      // {
-      //   path: '/updateprofile',
-      //   element: <Updateprofile></Updateprofile>,
-      // },
       {
         path: '/login',
         element: <Login></Login>,
@@ -44,10 +37,6 @@ const router = createBrowserRouter([
       {
         path: '/register',
         element: <Register></Register>,
-      },
-      {
-        path: '/errorpage',
-        element: <Errorpage></Errorpage>,
       },
     ],
   },

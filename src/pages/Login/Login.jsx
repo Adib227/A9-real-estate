@@ -141,10 +141,7 @@ const Login = () => {
               {}
 
               {user ? (
-                <button
-                  onClick={(handleSignOut, handleToastOne)}
-                  className="btn btn-secondary"
-                >
+                <button onClick={handleSignOut} className="btn btn-secondary">
                   Sign Out
                 </button>
               ) : (
@@ -154,12 +151,22 @@ const Login = () => {
                     className="btn btn-secondary w-full"
                   >
                     Sign in with Google
+                    <img
+                      className="w-6 h-6"
+                      src="https://i.ibb.co/tcXrSXm/Google-G-logo-svg.webp"
+                      alt=""
+                    />
                   </button>
                   <button
                     onClick={handleGithubSignIn}
                     className="btn btn-secondary w-full mt-4"
                   >
                     Github Login
+                    <img
+                      className="w-6 h-6"
+                      src="https://i.ibb.co/WW0FjpL/Git-Hub-Invertocat-Logo-svg.png"
+                      alt=""
+                    />
                   </button>
                 </div>
               )}

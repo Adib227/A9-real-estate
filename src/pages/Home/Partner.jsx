@@ -1,9 +1,10 @@
 import React from 'react';
+import 'animate.css';
 
 const Partner = () => {
   return (
     <div className=" grid py-20 bg-[#FD6E0A33] my-8">
-      <div className="max-w-full mx-auto text-2xl lg:text-4xl font-semibold">
+      <div className=" max-w-full mx-auto text-2xl lg:text-4xl font-semibold">
         Out Partners
       </div>
       <div className="max-w-full mx-auto text-lg lg:text-lg px-7 lg:px-0 pt-4 lg:pt-6 font-normal">

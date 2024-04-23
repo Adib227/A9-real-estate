@@ -4,12 +4,17 @@ const Estate = ({ bEstate }) => {
   // const { estate_title, segment_name, image, description, status } =
   //   estate || {};
   // console.log(estate);
+  // eslint-disable-next-line react/prop-types
   const { estate_title, segment_name, image, description, Status, id, price } =
     bEstate;
 
   return (
     <div className=" mx-auto">
-      <div className="max-w-xs lg:max-w-xl mx-auto p-8 m-8 rounded-md shadow-xl dark:bg-gray-100 dark:text-gray-800">
+      <div
+        className="my-16 max-w-xs lg:max-w-xl mx-auto p-8 m-8 rounded-md shadow-xl dark:bg-gray-100 dark:text-gray-800"
+        data-aos="zoom-in"
+        data-aos-duration="1500"
+      >
         <img
           src={image}
           alt=""

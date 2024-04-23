@@ -19,11 +19,11 @@ const Navbar = () => {
           Update Profile
         </NavLink>
       </li>
-      <li>
+      {/* <li>
         <NavLink className to="/errorPage">
           404 Page
         </NavLink>
-      </li>
+      </li> */}
       <li>
         <NavLink className to="/aboutUs">
           About us

@@ -29,7 +29,11 @@ const EstateDetails = () => {
       <Helmet>
         <title>Ten Build - Details {id}</title>
       </Helmet>
-      <div className="hero bg-stone-300 rounded-xl w-[420px] mx-auto lg:w-full lg:mx-auto mt-16">
+      <div
+        className="hero bg-stone-300 rounded-xl w-[420px] mx-auto lg:w-full lg:mx-auto mt-16"
+        data-aos="zoom-in"
+        data-aos-duration="1500"
+      >
         <div className="hero-content flex-col lg:flex-row gap-x-24">
           <img src={image} className="md: lg:max-w-xl rounded-lg shadow-2xl" />
           <div>
