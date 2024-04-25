@@ -36,6 +36,7 @@ const Login = () => {
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then(result => {
+        alert('Logged in successfully');
         console.log(result.user);
         navigate('/');
       })
@@ -47,6 +48,7 @@ const Login = () => {
   const handleGithubSignIn = () => {
     signInWithGithub()
       .then(result => {
+        alert('Logged in successfully');
         console.log(result.user);
         navigate('/');
       })
@@ -55,9 +57,6 @@ const Login = () => {
       });
   };
 
-  const handleToast = () => {
-    toast('Logged in successfully');
-  };
   const handleLogin = e => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -67,41 +66,20 @@ const Login = () => {
     newUser(email, password)
       .then(result => {
         console.log(result.user);
+        alert('Logged in successfully');
         e.target.reset();
         navigate('/');
       })
       .catch(error => {
         console.error(error);
       });
-
-    // setRegisterError('');
-    // setSuccess('');
-
-    // createUserWithEmailAndPassword(auth, email, password);
-    // e.preventDefault()
-    //   .then(result => {
-    //     console.log(result.user);
-    //     // setSuccess('User Logger In Successfully');
-
-    //     // updateProfile(result.user, {
-    //     //   photoURL: 'https://example.com/jane-q-user/profile.jpg',
-    //     // })
-    //     //   .then(() => {
-    //     //     console.log('Profile Updated');
-    //     //   })
-    //     //   .catch();
-    //   })
-    //   .catch(error => {
-    //     console.error(error);
-    //     // setRegisterError(error.message);
-    //   });
-    // return;
   };
 
   const handleSignOut = () => {
     signOut(auth)
       .then(result => {
         setUser(null);
+        alert('Signed Out successfully');
         console.log(result);
       })
       .catch(error => {
@@ -158,9 +136,7 @@ const Login = () => {
                 />
               </div>
               <div className="form-control mt-6">
-                <button onClick={handleToast} className="btn btn-primary">
-                  Login
-                </button>
+                <button className="btn btn-primary">Login</button>
               </div>
               <p>
                 New here? Please

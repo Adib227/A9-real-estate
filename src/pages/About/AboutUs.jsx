@@ -46,9 +46,7 @@ const AboutUs = () => {
               alt=""
               className="w-16 h-20 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-300"
             />
-            <p className="text-xl font-semibold leading-tight">
-              Distinctio Animi
-            </p>
+            <p className="text-xl font-semibold leading-tight">Sophia devine</p>
             <p className="text-sm uppercase">Aliquam illum</p>
           </div>
         </div>
@@ -88,9 +86,7 @@ const AboutUs = () => {
               alt=""
               className="w-16 h-20 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-300"
             />
-            <p className="text-xl font-semibold leading-tight">
-              Distinctio Animi
-            </p>
+            <p className="text-xl font-semibold leading-tight">Elon Musk</p>
             <p className="text-sm uppercase">Aliquam illum</p>
           </div>
         </div>
@@ -131,9 +127,7 @@ const AboutUs = () => {
               alt=""
               className="w-16 h-20 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-300"
             />
-            <p className="text-xl font-semibold leading-tight">
-              Distinctio Animi
-            </p>
+            <p className="text-xl font-semibold leading-tight">Nita Ambani</p>
             <p className="text-sm uppercase">Aliquam illum</p>
           </div>
         </div>
@@ -174,9 +168,7 @@ const AboutUs = () => {
               alt=""
               className="w-16 h-20 mb-2 -mt-16 bg-center bg-cover rounded-full dark:bg-gray-500 dark:bg-gray-300"
             />
-            <p className="text-xl font-semibold leading-tight">
-              Distinctio Animi
-            </p>
+            <p className="text-xl font-semibold leading-tight">Bill Gates</p>
             <p className="text-sm uppercase">Aliquam illum</p>
           </div>
         </div>

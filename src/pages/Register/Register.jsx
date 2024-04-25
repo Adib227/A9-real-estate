@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import auth from '../../firebase/firebase.config';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
 import { AuthContext } from '../../providers/AuthProvider';
@@ -37,25 +36,6 @@ const Register = () => {
       );
       return;
     }
-
-    // createUserWithEmailAndPassword(auth, email, password)
-    //   .then(result => {
-    //     console.log(result.user);
-    //     setSuccess('User Created Successfully');
-
-    //     // updateProfile(result.user, {
-    //     //   displayName: name,
-    //     //   photoURL: 'https://example.com/jane-q-user/profile.jpg',
-    //     // })
-    //     //   .then(() => {
-    //     //     console.log('Profile Updated');
-    //     //   })
-    //     //   .catch();
-    //   })
-    //   .catch(error => {
-    //     // console.log(error);
-    //     setRegisterError(error.message);
-    //   });
 
     registerUser(email, password)
       .then(result => {
