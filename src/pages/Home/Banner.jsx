@@ -16,7 +16,7 @@ const Banner = () => {
     <Swiper
       navigation={true}
       modules={[Navigation]}
-      className="mySwiper my-8 mt-10 lg:mt-8"
+      className="mySwiper my-8 mt-20 lg:mt-16"
     >
       <SwiperSlide>
         <img

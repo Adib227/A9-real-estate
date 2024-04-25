@@ -6,12 +6,14 @@ import Root from './Layouts/Root.jsx';
 import Home from './pages/Home/Home.jsx';
 import Login from './pages/Login/Login.jsx';
 import Register from './pages/Register/Register.jsx';
-import Estate from './pages/Home/Estate.jsx';
 import EstateDetails from './pages/Home/Estatedetails/Estatedetails.jsx';
 import Errorpage from './pages/Errorpage/Errorpage.jsx';
-import Userprofile from './pages/Userprofile/Userprofile.jsx';
-import Updateprofile from './pages/Updateprofile/Updateprofile.jsx';
 import { HelmetProvider } from 'react-helmet-async';
+import AuthProvider from './providers/AuthProvider.jsx';
+import AboutUs from './pages/About/AboutUs.jsx';
+import PrivateRoutes from './Routes/PrivateRoutes.jsx';
+import Updateprofile from './pages/Updateprofile/Updateprofile.jsx';
+import Userprofile from './pages/Userprofile/Userprofile.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,12 +33,32 @@ const router = createBrowserRouter([
         loader: () => fetch('/Fakedata.json'),
       },
       {
+        path: '/updateProfile',
+        element: <Updateprofile></Updateprofile>,
+      },
+      {
+        path: '/userProfile',
+        element: (
+          <PrivateRoutes>
+            <Userprofile></Userprofile>
+          </PrivateRoutes>
+        ),
+      },
+      {
         path: '/login',
         element: <Login></Login>,
       },
       {
         path: '/register',
         element: <Register></Register>,
+      },
+      {
+        path: '/aboutUs',
+        element: (
+          <PrivateRoutes>
+            <AboutUs></AboutUs>
+          </PrivateRoutes>
+        ),
       },
     ],
   },
@@ -45,7 +67,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
-      <RouterProvider router={router}></RouterProvider>
+      <AuthProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </AuthProvider>
     </HelmetProvider>
   </React.StrictMode>
 );

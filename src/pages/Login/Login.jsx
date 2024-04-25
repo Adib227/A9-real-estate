@@ -6,37 +6,59 @@ import {
   signInWithPopup,
   signOut,
 } from 'firebase/auth';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Login = () => {
+  const { newUser, signInWithGoogle, signInWithGithub } =
+    useContext(AuthContext);
+  const navigate = useNavigate();
+
   const [user, setUser] = useState();
   const auth = getAuth();
-  const googleProvider = new GoogleAuthProvider();
-  const githubProvider = new GithubAuthProvider();
+  // const googleProvider = new GoogleAuthProvider();
+  // const githubProvider = new GithubAuthProvider();
+
+  // const handleGoogleSignIn = () => {
+  //   signInWithGoogle()
+  //     .then(result => {
+  //       console.log(result.user);
+  //     })
+  //     .catch(error => {
+  //       console.error(error);
+  //     });
+  // };
 
   const handleGoogleSignIn = () => {
-    signInWithPopup(auth, googleProvider)
+    signInWithGoogle()
       .then(result => {
-        const loggedInUser = result.user;
-        console.log(loggedInUser);
-        setUser(loggedInUser);
+        console.log(result.user);
+        navigate('/');
       })
       .catch(error => {
-        console.log(error.message);
+        console.error(error);
       });
   };
 
-  const [registerError, setRegisterError] = useState('');
-  const [success, setSuccess] = useState('');
+  const handleGithubSignIn = () => {
+    signInWithGithub()
+      .then(result => {
+        console.log(result.user);
+        navigate('/');
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  };
+
+  // const [registerError, setRegisterError] = useState('');
+  // const [success, setSuccess] = useState('');
   const handleToast = () => {
     toast('Logged in successfully');
-  };
-  const handleToastOne = () => {
-    toast('Signed Out');
   };
   const handleLogin = e => {
     e.preventDefault();
@@ -44,27 +66,38 @@ const Login = () => {
     const password = e.target.password.value;
     console.log(email, password);
 
-    setRegisterError('');
-    setSuccess('');
-
-    createUserWithEmailAndPassword(auth, email, password);
-    e.preventDefault()
+    newUser(email, password)
       .then(result => {
         console.log(result.user);
-        setSuccess('User Logger In Successfully');
-
-        // updateProfile(result.user, {
-        //   photoURL: 'https://example.com/jane-q-user/profile.jpg',
-        // })
-        //   .then(() => {
-        //     console.log('Profile Updated');
-        //   })
-        //   .catch();
+        e.target.reset();
+        navigate('/');
       })
       .catch(error => {
         console.error(error);
-        setRegisterError(error.message);
       });
+
+    // setRegisterError('');
+    // setSuccess('');
+
+    // createUserWithEmailAndPassword(auth, email, password);
+    // e.preventDefault()
+    //   .then(result => {
+    //     console.log(result.user);
+    //     // setSuccess('User Logger In Successfully');
+
+    //     // updateProfile(result.user, {
+    //     //   photoURL: 'https://example.com/jane-q-user/profile.jpg',
+    //     // })
+    //     //   .then(() => {
+    //     //     console.log('Profile Updated');
+    //     //   })
+    //     //   .catch();
+    //   })
+    //   .catch(error => {
+    //     console.error(error);
+    //     // setRegisterError(error.message);
+    //   });
+    // return;
   };
 
   const handleSignOut = () => {
@@ -78,17 +111,17 @@ const Login = () => {
       });
   };
 
-  const handleGithubSignIn = () => {
-    signInWithPopup(auth, githubProvider)
-      .then(result => {
-        const loggedUser = result.user;
-        console.log(loggedUser);
-        setUser(loggedUser);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  };
+  // const handleGithubSignIn = () => {
+  //   signInWithPopup(auth, githubProvider)
+  //     .then(result => {
+  //       const loggedUser = result.user;
+  //       console.log(loggedUser);
+  //       setUser(loggedUser);
+  //     })
+  //     .catch(error => {
+  //       console.log(error);
+  //     });
+  // };
 
   return (
     <div>

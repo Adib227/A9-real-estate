@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => console.log('Logged out successfully'))
+      .catch(error => console.error(error));
+  };
+
   const navLinks = (
     <>
       <li>
@@ -14,16 +23,16 @@ const Navbar = () => {
           User Profile
         </NavLink>
       </li>
-      <li>
-        <NavLink className to="/updateProfile">
-          Update Profile
-        </NavLink>
-      </li>
-      {/* <li>
-        <NavLink className to="/errorPage">
-          404 Page
-        </NavLink>
-      </li> */}
+      {user && (
+        <>
+          {' '}
+          <li>
+            <NavLink className to="/updateProfile">
+              Update Profile
+            </NavLink>
+          </li>{' '}
+        </>
+      )}
       <li>
         <NavLink className to="/aboutUs">
           About us
@@ -75,12 +84,18 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
       <div className="navbar-end">
-        <Link to="/login">
-          <button className="btn">Login</button>
-        </Link>
-        <Link to="/register">
-          <button className="btn">Registration</button>
-        </Link>
+        {user ? (
+          <>
+            <span>{user.email}</span>
+            <button onClick={handleLogOut} className="btn btn-active">
+              Sign Out
+            </button>
+          </>
+        ) : (
+          <Link to="/login">
+            <button className="btn btn-active">Login</button>
+          </Link>
+        )}
       </div>
     </div>
   );
