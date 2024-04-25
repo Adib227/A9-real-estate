@@ -6,7 +6,8 @@ const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleLogOut = () => {
-    logOut()
+    logOut();
+    alert('logged out successfully')
       .then(() => console.log('Logged out successfully'))
       .catch(error => console.error(error));
   };
