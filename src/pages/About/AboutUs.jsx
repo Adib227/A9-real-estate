@@ -21,9 +21,14 @@ const AboutUs = () => {
                 <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                 <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
               </svg>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatibus quibusdam, eligendi exercitationem molestias possimus
-              facere.
+              <div>
+                <div>⭐⭐⭐⭐⭐</div> "Our experience with Ten Build Realty was
+                exceptional! From the initial consultation to the final closing,
+                they guided us through every step of the process with
+                professionalism and expertise. We couldn't be happier with our
+                new home and would highly recommend Ten Build Realty to anyone
+                in the market for a new property."
+              </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -59,9 +64,13 @@ const AboutUs = () => {
                 <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                 <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
               </svg>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatibus quibusdam, eligendi exercitationem molestias possimus
-              facere.
+              <div>
+                <div>⭐⭐⭐⭐⭐</div> "Working with Ten Build Real Estate was a
+                breeze! Their team was knowledgeable, responsive, and always had
+                our best interests at heart. They helped us find the perfect
+                home in a great neighborhood, and we couldn't be more grateful.
+                Thank you, Ten Build Real Estate!"
+              </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -97,9 +106,14 @@ const AboutUs = () => {
                 <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                 <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
               </svg>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatibus quibusdam, eligendi exercitationem molestias possimus
-              facere.
+              <div>
+                <div>⭐⭐⭐⭐⭐</div>"Ten Build Properties went above and beyond
+                to make our home buying experience stress-free and enjoyable.
+                Their attention to detail and commitment to customer
+                satisfaction are truly commendable. We are thrilled with our new
+                home and grateful for the outstanding service provided by Ten
+                Build Properties."
+              </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -135,9 +149,14 @@ const AboutUs = () => {
                 <path d="M232,246.857V16H16V416H54.4ZM48,48H200V233.143L48,377.905Z"></path>
                 <path d="M280,416h38.4L496,246.857V16H280ZM312,48H464V233.143L312,377.905Z"></path>
               </svg>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Voluptatibus quibusdam, eligendi exercitationem molestias possimus
-              facere.
+              <div>
+                <div>⭐⭐⭐⭐⭐</div> "Ten Build Homes provided us with
+                exceptional service from start to finish. Their knowledgeable
+                agents helped us navigate the competitive housing market and
+                secure our dream home at a great price. We are so grateful for
+                their expertise and support and would highly recommend Ten Build
+                Homes to anyone in need of real estate services."
+              </div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
