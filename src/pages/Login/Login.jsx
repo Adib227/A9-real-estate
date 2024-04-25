@@ -55,8 +55,6 @@ const Login = () => {
       });
   };
 
-  // const [registerError, setRegisterError] = useState('');
-  // const [success, setSuccess] = useState('');
   const handleToast = () => {
     toast('Logged in successfully');
   };

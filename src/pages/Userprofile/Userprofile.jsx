@@ -27,7 +27,7 @@ const Userprofile = () => {
           <label className="input input-bordered border-stone-600  flex items-center gap-2">
             <p>UID: {user.uid}</p>
             <input type="text" className="grow" placeholder="" />
-            <span className="badge badge-info">Optional</span>
+            {/* <span className="badge badge-info">Optional</span> */}
           </label>
         </div>
       )}
